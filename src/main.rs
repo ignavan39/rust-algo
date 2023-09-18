@@ -1,14 +1,16 @@
-#[path = "./algo/find_left_max_occurrences_column.rs"]
 mod algo;
-#[path = "./utils/vector_from_file.rs"]
 mod utils;
+
+use algo::find_left_max_occurrences_column::find_left_max_occurrences_column;
+use utils::vector_from_file::vector_from_file;
+
 
 fn main(){}
 
 #[test]
 fn find_left_max_occurrences_column_test() {
-    let lines = utils::vector_from_file("test1.txt");
+    let lines = vector_from_file("test1.txt");
 
-    let result = algo::find_left_max_occurrences_column(lines);
+    let result = find_left_max_occurrences_column(lines);
     assert!(result == 99);
 }
